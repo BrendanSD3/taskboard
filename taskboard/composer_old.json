@@ -1,0 +1,6 @@
+{
+    "require": {
+        "laravel/ui": "^2.0",
+        "bitfumes/laravel-multiauth": "^4.1"
+    }
+}
