@@ -12,8 +12,8 @@ class boardcontroller extends Controller
     {
         $user=auth()->user()->name;
         $Todos = DB::table('boards')->select('id','title','desc','status')->where('status', 'ToDo')->where('edited_by',$user)->get();
-        $inprogress = DB::table('boards')->select('id','title','desc','status')->where('status', 'inprogress')->get();
-        $dones = DB::table('boards')->select('id','title','desc','status')->where('status', 'Done')->get();
+        $inprogress = DB::table('boards')->select('id','title','desc','status')->where('status', 'inprogress')->where('edited_by',$user)->get();
+        $dones = DB::table('boards')->select('id','title','desc','status')->where('status', 'Done')->where('edited_by',$user)->get();
         return view('boards.todayboard', compact('Todos','inprogress','dones'));        
     }
     public function create(Request $request)
