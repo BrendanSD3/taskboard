@@ -20,6 +20,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('board','boardcontroller');
+Route::post('/board','boardcontroller@create');
+Route::get('/board/edit','boardcontroller@edit');
+Route::put('/board','boardcontroller@update');
 
 Route::prefix('admin')->group(function(){
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
