@@ -67,6 +67,7 @@ return [
     | Supported: "database", "eloquent"
     |
     */
+    
 
     'providers' => [
         'users' => [
