@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Boards;
-use Illuminate\Support\Facades\Log;
+
 
 class boardcontroller extends Controller
 {
